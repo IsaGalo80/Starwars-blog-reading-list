@@ -3,15 +3,31 @@ import { Link } from "react-router-dom";
 
 export const Navbar = () => {
 	return (
-		<nav className="navbar navbar-light bg-light mb-3">
+		<nav classNameName="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<span className="navbar-brand mb-0 h1">React Boilerplate</span>
+				<div> <img src="https://www.freepnglogos.com/uploads/star-wars-logo-31.png" style={{width:"9rem", height:"5rem"}}>
+				</img>
+				</div>
 			</Link>
-			<div className="ml-auto">
+			<div classNameName="ml-auto">
 				<Link to="/demo">
-					<button className="btn btn-primary">Check the Context in action</button>
+				<div className="btn-group position-absolute top-0 end-0">
+  <button type="button" className="btn btn-primary" style={{width:"5rem"}}>Favoritos</button>
+  <button type="button" className="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span className="visually-hidden"></span>
+  </button>
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item" href="#"></a></li>
+    <li><a className="dropdown-item" href="#"></a></li>
+    <li><a className="dropdown-item" href="#"></a></li>
+    <li><a className="dropdown-divider"></a></li>
+    <li><a className="dropdown-item" href="#"></a></li>
+  </ul>
+</div>
 				</Link>
 			</div>
 		</nav>
 	);
 };
+
+
