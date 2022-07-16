@@ -24,8 +24,7 @@ export const VehiculosDetalle = () => {
     }, []);
 
 
-    return ( <>
-        <h1 > Vista vehiculos </h1>  
+    return ( <> 
         <p> {store.vehiculosDetalle.name} </p>  
         <p > {store.vehiculosDetalle.model} </p>  
         <p > {store.vehiculosDetalle.passengers } </p>  

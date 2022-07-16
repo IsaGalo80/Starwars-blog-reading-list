@@ -14,40 +14,14 @@ export const Home = () => {
     actions.vehiculos();
   }, []);
 
-  // const renderPeople = ()=>{
-  // 	console.log(store.people)
-  // 	let cards=store.people.map((person,index)=>{
-  // 		return <People name={person.name} id= {person.uid}/>
-
-  // 	})
-  // 	console.log(cards)
-  // 	return cards
-  // }
-
-  // const renderVehicles = ()=>{
-  // 	console.log(store.vehicles)
-  // 	let cards=store.vehicles.map((vehiculos,index)=>{
-  // 		return <Vehicles name={vehiculos.name}/>
-  // 	})
-  // 	console.log(cards)
-  // 	return cards
-  // }
-
-  // const renderPlanets = ()=>{
-  // 	console.log(store.planets)
-  // 	let cards=store.planets.map((planetas,index)=>{
-  // 		return <Planets name={planetas.name}/>
-  // 	})
-  // 	console.log(cards)
-  // 	return cards
-  // }
+  
 
   return (
     <>
       <div> <h1 className=" text-danger p-3">Characteres</h1></div>
-      <div className="row d-flex flex-column" style={{height: "32rem", overflowX:"auto"}}>
+      <div className="row d-flex flex-column" style={{height: "32rem", overflowX:"auto"}}> 
         {store.people.map((value, index) => {
-          return <Card key={index} name={value.name} link={`/character/${value.uid}`} />;
+          return <Card style={{margin:"5rem"}} key={index} name={value.name} link={`/character/${value.uid}`} />;
         })}
       </div>
 

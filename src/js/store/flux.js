@@ -31,7 +31,6 @@ const getState = ({
                     .then((res) => res.json())
                     .then((data) => setStore({
                         perDetall: data.result.properties
-
                     }))
                     .catch((err) => console.error(err));
             },
@@ -73,6 +72,16 @@ const getState = ({
                 } = getStore();
                 favoritos.push(nombrePersonaje)
                 console.log(favoritos)
+            },
+            addFavorite:(a)=>{
+                let store=getStore()
+                if(! store.favoritos.includes(a)){
+                    setStore({favoritos:[...store.favoritos,a]})
+                }
+                else {
+                    setStore({favoritos:store.favoritos.filter((x)=>
+                        x!=a)})
+                }
             }
         },
     };

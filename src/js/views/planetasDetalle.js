@@ -18,7 +18,6 @@ export const PlanetasDetalle = () => {
 
 
     return ( <>
-        <h1 > Vista planetas </h1> 
         <p > {store.planetaDetalle.name} </p> 
         <p > {store.planetaDetalle.tamaño} </p> 
         <p > {store.planetaDetalle.climate} </p> 

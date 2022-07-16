@@ -13,7 +13,7 @@ export const Planets = (props) => {
         className = "card"
         style = {
             {
-                width: "20rem",
+                width: "25rem",
                 height:"30rem",
                 margin: "1rem"
             }

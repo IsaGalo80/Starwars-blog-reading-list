@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
+import  {Context} from "../store/appContext";
+
 
 export const Navbar = () => {
+	const {store,actions}=useContext(Context)
 	return (
 		<nav classNameName="navbar navbar-light bg-light mb-3">
 			<Link to="/">
@@ -10,21 +13,20 @@ export const Navbar = () => {
 				</div>
 			</Link>
 			<div classNameName="ml-auto">
-				<Link to="/demo">
 				<div className="btn-group position-absolute top-0 end-0">
-  <button type="button" className="btn btn-primary" style={{width:"5rem"}}>Favoritos</button>
   <button type="button" className="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
-    <span className="visually-hidden"></span>
+    <span>Favoritos{store.favoritos.length}</span>
   </button>
   <ul className="dropdown-menu">
-    <li><a className="dropdown-item" href="#"></a></li>
-    <li><a className="dropdown-item" href="#"></a></li>
-    <li><a className="dropdown-item" href="#"></a></li>
-    <li><a className="dropdown-divider"></a></li>
-    <li><a className="dropdown-item" href="#"></a></li>
+	{store.favoritos.map((favoritos,index)=>{
+		return(
+<li key={index}>{favoritos}<button className="btn btn-warnig" onClick={()=>{actions.addFavorite(favoritos)}}>hola</button></li>
+		)
+	})}
+    
+   
   </ul>
 </div>
-				</Link>
 			</div>
 		</nav>
 	);
