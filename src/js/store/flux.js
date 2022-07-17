@@ -73,14 +73,17 @@ const getState = ({
                 favoritos.push(nombrePersonaje)
                 console.log(favoritos)
             },
-            addFavorite:(a)=>{
-                let store=getStore()
-                if(! store.favoritos.includes(a)){
-                    setStore({favoritos:[...store.favoritos,a]})
-                }
-                else {
-                    setStore({favoritos:store.favoritos.filter((x)=>
-                        x!=a)})
+            addFavorite: (a) => {
+                let store = getStore()
+                if (!store.favoritos.includes(a)) {
+                    setStore({
+                        favoritos: [...store.favoritos, a]
+                    })
+                } else {
+                    setStore({
+                        favoritos: store.favoritos.filter((x) =>
+                            x != a)
+                    })
                 }
             }
         },

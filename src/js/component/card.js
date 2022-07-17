@@ -29,8 +29,6 @@ export const Card = (props) => {
         <Link to = {
             props.link
         } >
-        
-        
             <button type="button" className="btn btn-outline-primary align-bottom " style={{width:"8rem", height:"2rem"}}> Learn more! </button> </Link> 
         </div>
 
