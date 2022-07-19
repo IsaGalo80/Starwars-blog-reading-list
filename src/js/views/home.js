@@ -55,7 +55,7 @@ export const Home = () => {
         })}
       </div>
       <div>
-        <h1 className=" tex-danger p-3">Vehicles</h1>
+      <h1 className=" text-danger p-3">Vehicles</h1>
       </div>
       <div
         className="row d-flex flex-column"

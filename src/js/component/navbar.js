@@ -19,7 +19,7 @@ export const Navbar = () => {
         <div className="btn-group position-absolute top-0 end-0">
           <button
             type="button"
-            className="btn btn-primary dropdown-toggle dropdown-toggle-split"
+            className="btn btn-primary dropdown-toggle dropdown-toggle-split mt-4"
             style={{ width: "11rem" }}
             data-bs-toggle="dropdown"
             aria-expanded="false"
