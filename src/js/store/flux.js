@@ -12,7 +12,6 @@ const getState = ({
             perDetall: [],
             planetaDetalle: [],
             vehiculosDetalle: [],
-            image: [],
         },
         actions: {
             // Use getActions to call a function within a fuction
@@ -86,15 +85,7 @@ const getState = ({
                             x != a)
                     })
                 }
-            },
-            image: () => {
-                fetch("https://starwars-visualguide.com/#/")
-                    .then((res) => res.json())
-                    .then((data) => setStore({
-                        image: data.results
-                    }))
-                    .catch((err) => console.error(err));
-            },
+            }
         },
     };
 };

@@ -40,6 +40,9 @@ const Layout = () => {
 						<Route exact path="/vehicles">
 							<Vehicles />
 						</Route>
+						<Route exact path="/card">
+							<Card/>
+						</Route>
 						<Route exact path="/character/:uid">
 							<VistaDetallePersonaje/>
 						</Route>

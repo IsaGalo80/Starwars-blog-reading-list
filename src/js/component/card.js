@@ -16,7 +16,10 @@ export const Card = (props) => {
           margin: "1rem",
         }}
       >
+        
+          
         <div className="card-body">
+        <img src={"https://starwars-visualguide.com/assets/img/characters/" + props.uid+ ".jpg"} class="card-img-top"/>
           <h5 className="card-title"> {props.name} </h5>
           <div className="row ">
             <div className="col-9 position-relative position-absolute bottom-0 start-0">
@@ -54,4 +57,6 @@ Card.propTypes = {
   name: PropTypes.string,
   key: PropTypes.number,
   link: PropTypes.string,
+  src: PropTypes.string,
+  uid: PropTypes.number
 };

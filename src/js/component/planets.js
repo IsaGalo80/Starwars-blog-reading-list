@@ -16,6 +16,7 @@ export const Planets = (props) => {
           margin: "1rem",
         }}
       >
+        <img src={"https://starwars-visualguide.com/assets/img/planets/" + props.uid+ ".jpg"} class="card-img-top"/>
         <div className="card-body">
           <h5 className="card-title"> {props.name} </h5>
           <div className="row ">
@@ -41,4 +42,6 @@ Planets.propTypes = {
   name: PropTypes.string,
   key: PropTypes.number,
   link: PropTypes.string,
+  src: PropTypes.string,
+  uid: PropTypes.number
 };

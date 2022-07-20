@@ -24,13 +24,14 @@ export const Home = () => {
         className="row d-flex flex-column"
         style={{ height: "32rem", overflowX: "auto" }}
       >
-        {store.people.map((value, index) => {
+        {store.people.map((value, index, uid) => {
           return (
             <Card
               style={{ margin: "5rem" }}
               key={index}
               name={value.name}
               link={`/character/${value.uid}`}
+              uid={value.uid}
             />
           );
         })}
@@ -43,12 +44,13 @@ export const Home = () => {
         className="row d-flex flex-column"
         style={{ height: "32rem", overflowX: "auto" }}
       >
-        {store.planets.map((value, index) => {
+        {store.planets.map((value, index, uid) => {
           return (
             <Card
               style={{ margin: "5rem" }}
               key={index}
               name={value.name}
+              uid={value.uid}
               link={`/character/${value.uid}`}
             />
           );
@@ -61,7 +63,7 @@ export const Home = () => {
         className="row d-flex flex-column"
         style={{ height: "32rem", overflowX: "auto" }}
       >
-        {store.vehicles.map((value, index) => {
+        {store.vehicles.map((value, index, uid) => {
           return (
             <Card
               style={{ margin: "5rem" }}
