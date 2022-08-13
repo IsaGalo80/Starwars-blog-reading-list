@@ -5,13 +5,17 @@ import ScrollToTop from "./component/scrollToTop";
 import { Home } from "./views/home";
 import { Demo } from "./views/demo";
 import { Single } from "./views/single";
+
 import injectContext from "./store/appContext";
+
 import { Planets } from "./component/planets";
 import { Vehicles } from "./component/vehicles";
 import { Card } from "./component/card";
+
 import { VistaDetallePersonaje } from "./views/vistaDetallePersonaje";
 import { VehiculosDetalle } from "./views/vehiculosDetalle";
 import { PlanetasDetalle } from "./views/planetasDetalle";
+
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 
@@ -46,10 +50,10 @@ const Layout = () => {
 						<Route exact path="/character/:uid">
 							<VistaDetallePersonaje/>
 						</Route>
-						<Route exact path="/character/:uid">
+						<Route exact path="/vehicles/:uid">
 							<VehiculosDetalle/>
 						</Route>
-						<Route exact path="/character/:uid">
+						<Route exact path="/planets/:uid">
 							<PlanetasDetalle/>
 						</Route>
 						<Route exact path="/single/:theid">

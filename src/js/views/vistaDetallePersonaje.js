@@ -14,6 +14,7 @@ export const VistaDetallePersonaje = () => {
 
     return(
         <>
+        
         <p>{store.perDetall.name}</p>
         <p>{store.perDetall.eye_color}</p>
         <p>{store.perDetall.gender}</p>

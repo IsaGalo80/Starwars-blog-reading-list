@@ -45,13 +45,13 @@ export const Vehicles = (props) => {
         key={props.key}
         className="card"
         style={{
-          width: "25rem",
+          width: "20rem",
           height: "30rem",
           margin: "1rem",
         }}
       >
-        <img src={"https://starwars-visualguide.com/assets/img/vehicles/" + props.uid+ ".jpg"} class="card-img-top"/>
         <div className="card-body">
+        <img src={"https://starwars-visualguide.com/assets/img/vehicles/" + props.uid+ ".jpg"} class="card-img-top" alt="imagenes de los vehiculos"/>
           <h5 className="card-title"> {props.name} </h5>
           <div className="row ">
             <div className="col-9 position-relative position-absolute bottom-0 start-0">

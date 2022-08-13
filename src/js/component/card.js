@@ -11,7 +11,7 @@ export const Card = (props) => {
         key={props.key}
         className="card"
         style={{
-          width: "25rem",
+          width: "20rem",
           height: "30rem",
           margin: "1rem",
         }}
@@ -19,7 +19,7 @@ export const Card = (props) => {
         
           
         <div className="card-body">
-        <img src={"https://starwars-visualguide.com/assets/img/characters/" + props.uid+ ".jpg"} class="card-img-top"/>
+        <img src={props.img} class="card-img-top"/>
           <h5 className="card-title"> {props.name} </h5>
           <div className="row ">
             <div className="col-9 position-relative position-absolute bottom-0 start-0">
@@ -58,5 +58,6 @@ Card.propTypes = {
   key: PropTypes.number,
   link: PropTypes.string,
   src: PropTypes.string,
-  uid: PropTypes.number
+  uid: PropTypes.number,
+  img: PropTypes.string
 };

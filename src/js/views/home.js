@@ -32,6 +32,8 @@ export const Home = () => {
               name={value.name}
               link={`/character/${value.uid}`}
               uid={value.uid}
+              img={"https://starwars-visualguide.com/assets/img/characters/" + value.uid + ".jpg"}
+
             />
           );
         })}
@@ -50,8 +52,9 @@ export const Home = () => {
               style={{ margin: "5rem" }}
               key={index}
               name={value.name}
-              uid={value.uid}
-              link={`/character/${value.uid}`}
+              id={value}
+              link={`/planets/${value.uid}`}
+              img={"https://starwars-visualguide.com/assets/img/planets/" + value.uid + ".jpg"}
             />
           );
         })}
@@ -69,7 +72,9 @@ export const Home = () => {
               style={{ margin: "5rem" }}
               key={index}
               name={value.name}
-              link={`/character/${value.uid}`}
+              link={`/vehicles/${value.uid}`}
+              img={"https://starwars-visualguide.com/assets/img/vehicles/" + value.uid + ".jpg"}
+
             />
           );
         })}
